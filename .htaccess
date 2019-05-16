@@ -1,0 +1,4 @@
+<ifModule mod_headers.c>
+# わざと脆弱にしておく
+Header always set X-XSS-Protection "0"
+</ifModule>
