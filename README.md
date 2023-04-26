@@ -15,8 +15,8 @@ docker compose up -d
 
 - http://localhost:8888/01.php
 - http://localhost:8888/02.php
-- http://localhost:8888/02.php
-- http://localhost:8888/04.php
+- http://localhost:8888/03.php
+- http://localhost:8888/rawurlencode.php
 
 # ログ確認
 
