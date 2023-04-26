@@ -18,7 +18,7 @@
     </form>
     value: <span id="write"></span>
 <script>
-    var show = '<?php echo htmlspecialchars($_GET['show']); ?>';
+    var show = '<?php echo htmlspecialchars(@$_GET['show'], ENT_QUOTES, 'UTF-8'); ?>';
     $('#write').append(show);
 </script>
 </body>

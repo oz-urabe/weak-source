@@ -16,6 +16,6 @@
         <input type="text" name="show" value="">
         <p><input type="submit" value="submit"></p>
     </form>
-    value: <?php echo @$_GET['show']; ?>
+    value: <?php echo htmlspecialchars(@$_GET['show'], ENT_QUOTES, 'UTF-8'); ?>
 </body>
 </html>
