@@ -14,7 +14,11 @@
 <body>
     value: <span id="write"></span>
 <script>
-    $("#write").html(decodeURIComponent(location.hash.substring(1)));
+    console.log(decodeURIComponent(location.hash.substring(1)));
+    function escapeHtml(str) {
+        return jQuery('<div>').text(str).html();
+    }
+    $("#write").html(escapeHtml(decodeURIComponent(location.hash.substring(1))));
 </script>
 </body>
 </html>
