@@ -14,7 +14,7 @@
 <body>
     value: <span id="write"></span>
 <script>
-    $("#write").html(decodeURIComponent(location.hash.substring(1)));
+    $("#write").text(decodeURIComponent(location.hash.substring(1)));
 </script>
 </body>
 </html>
