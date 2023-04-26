@@ -14,7 +14,7 @@
 </head>
 <body style="margin: 10px;">
 <h2>前提</h2>
-リダイレクト先を http://localhost:8888/redirector.php?redirect= 経由し (redirect パラメータに http://localhost:8080/callback.php で始まるリダイレクト先のURL を渡せばOK)
+リダイレクト先を http://localhost:8888/redirector.php?redirect= 経由し (redirect パラメータに http://localhost:8888/callback.php で始まるリダイレクト先のURL を渡せばOK)
 受け側 http://localhost:8888/callback.php に GET で表示されるパラメータを問題の期待通りに実装してください
 
 $_GET の結果を var_dump() しています 。
