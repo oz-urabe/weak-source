@@ -18,8 +18,15 @@
     </form>
     value: <span id="write"></span>
 <script>
-    var show = '<?php echo htmlspecialchars($_GET['show']); ?>';
-    $('#write').append(show);
+    function escapeHtml(string){
+        return string.replace(/&/g, '&lt;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, "&#x27;");
+    }
+    var show = '<?php echo htmlspecialchars($_GET['show'], ENT_QUOTES, 'UTF-8'); ?>';
+    $('#write').append(escapeHtml(show));
 </script>
 </body>
 </html>
