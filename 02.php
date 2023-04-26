@@ -17,9 +17,10 @@
         <p><input type="submit" value="submit"></p>
     </form>
     value: <span id="write"></span>
+    <div id="example"><?php echo htmlspecialchars($_GET['show']); ?></div>
 <script>
-    var show = '<?php echo htmlspecialchars($_GET['show']); ?>';
-    $('#write').append(show);
+    console.log($_GET['show'])
+    $('#write').append(document.getElementById("example").value);
 </script>
 </body>
 </html>
