@@ -14,12 +14,13 @@
 <body>
     <form action="" method="get" accept-charset="utf-8">
         <input type="text" name="show" value="">
+        <input type="hidden" id="show-value" value="<?php echo htmlspecialchars(@$_GET['show'], ENT_QUOTES, 'UTF-8'); ?>">
         <p><input type="submit" value="submit"></p>
     </form>
     value: <span id="write"></span>
 <script>
-    var show = '<?php echo htmlspecialchars($_GET['show'], ENT_QUOTES, 'UTF-8'); ?>';
-    $('#write').append(show);
+    var show = $('#show-value').val();
+    $('#write').text(show);
 </script>
 </body>
 </html>
